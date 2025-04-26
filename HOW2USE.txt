@@ -1,0 +1,154 @@
+
+⚡arp-scan:
+************
+arp-scan -t 192.168.1.0/24
+arp-scan -t 192.168.1.114/24
+
+
+⚡dalfox:
+**********
+dalfox --help
+dalfox file urls.txt
+dalfox url http://192.168.1.129/ --report
+dalfox url http://192.168.1.129/ --report --silence
+more: https://github.com/hahwul/dalfox
+
+
+⚡ffuf:
+********
+ffuf help
+ffuf -w /path/to/wordlist -u https://target/FUZZ
+more info: https://github.com/ffuf/ffuf
+
+
+⚡getsubdomain:
+****************
+gsubdomains -Domain example.com
+gsubdomains -Domain example.com -File subdomains.txt
+
+
+⚡gobuster:
+************
+gobuster dir -u http://192.168.1.104/ -w C:\xworklist\SecLists\Discovery\Web-Content\common.txt
+gobuster dir -u http://192.168.1.104/ -w C:\xworklist\SecLists\Discovery\Web-Content\common.txt -n -v 
+gobuster dir -u http://192.168.1.104/ -w C:\xworklist\SecLists\Discovery\Web-Content\common.txt -t 50
+gobuster dir -u http://192.168.1.104/ -w C:\xworklist\SecLists\Discovery\Web-Content\common.txt -x php,txt,html
+gobuster dir -u http://192.168.1.104/ -w C:\xworklist\SecLists\Discovery\Web-Content\common.txt -f -b 403,404
+gobuster fuzz -u http://192.168.1.104/?FUZZ=test -w C:\xworklist\SecLists\Discovery\Web-Content\Passwords.fuzz.txt
+gobuster dns -d google.com -w C:\xworklist\SecLists\Discovery\Web-Content\common.txt -i
+more info: https://github.com/OJ/gobuster                       
+
+
+⚡hexeditor:
+*************
+only run "HexEditor"
+
+
+⚡httpx:
+*********
+httpx --help
+httpx -l urls.txt                                                                                                               
+httpx -l urls.txt -title -tech-detect -sc -probe
+httpx.exe -u https://example.com
+more: https://github.com/projectdiscovery/httpx
+
+
+⚡ipcalc:
+**********
+ipcalc 192.168.1.0/24
+ipcalc 192.168.1.114/24
+
+
+⚡katana:
+**********
+katana -h
+katana -u https://tesla.com
+katana -u https://tesla.com -silent                
+katana -list targeturls.txt
+echo https://tesla.com | katana
+echo "http://testphp.vulnweb.com" | katana > "~\Desktop\test.txt" -silent
+more: https://github.com/projectdiscovery/katana
+
+
+⚡masscan:
+***********
+masscan 0.0.0.0/0 -p0-65535
+masscan 0.0.0.0/0 --ports 80,443 --rate 10000000
+more: https://github.com/robertdavidgraham/masscan/wiki
+
+
+⚡ncat:
+********
+ncat -l 4444
+ncat -lvnp 4444
+ncat example.com 80
+more: https://nmap.org/ncat/guide/index.html
+
+
+⚡nuclei:
+**********
+nuclei -help                   
+nuclei -t cves/2021/ -l urls.txt              
+nuclei -u 192.168.1.117 -silent
+nuclei -u 192.168.1.117 -silent | format-table | findstr /i "low ; medium ; high"
+more: https://github.com/projectdiscovery/nuclei
+
+
+⚡nxc:
+*******
+nxc -h
+nxc smb 192.168.1.129 -u marcopolo -p 1234567
+nxc smb 192.168.1.129 -u 'marcopolo' -p '1234567' -M zerologon
+nxc winrm 192.168.1.129 -u marcopolo -p '1234567' -X 'powershell whoami'
+more: https://www.netexec.wiki/
+
+
+⚡procexp:
+***********
+only run "procexp"
+
+
+⚡procexp:
+***********
+only run "procmon"
+
+
+⚡subfinder:
+*************
+subfinder --help
+subfinder -d google.com
+subfinder -d google.com -v
+
+
+⚡termclean:
+*************
+only run "termclean"
+
+
+⚡waybackurls:
+***************
+waybackurls --help
+waybackurls "google.com"
+echo "https://www.mygm.in/" | waybackurls
+
+
+⚡wmiexplorer:
+***************
+only run "wmiexplorer"
+
+
+⚡otherland:
+*************
+decode-ascii                                       decode-ascii -value "<code>"
+decode-base64ReverseUTF8                           decode-base64ReverseUTF8 -value "<code>" 
+decode-base64unicode                               decode-base64unicode -value "<code>"
+decode-base64utf8                                  decode-base64utf8 -value "<code>"
+encode-ascii                                       encode-ascii -value "<text>"
+encode-base64ReverseUTF8                           encode-base64ReverseUTF8 -value "<text>"
+encode-base64unicode                               encode-base64unicode -value "<text>"
+encode-base64utf8                                  encode-base64utf8 -value "<text>"
+getqrcode                                          getqrcode -value "<url or text>" 
+getwebpage                                         getwebpage -value "<url>"
+
+
+
