@@ -23,8 +23,8 @@ more info: https://github.com/ffuf/ffuf
 
 ⚡getsubdomain:
 ****************
-gsubdomains -Domain example.com
-gsubdomains -Domain example.com -File subdomains.txt
+getsubdomain -Domain example.com
+getsubdomain -Domain example.com -File subdomains.txt
 
 
 ⚡gobuster:
